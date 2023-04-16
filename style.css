@@ -1,0 +1,530 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  margin: 0;
+}
+
+.container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.mobile-version {
+  display: none;
+}
+
+.button {
+  background-color: transparent;
+  color: #111111;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  padding: 22px 56px;
+  border: 4px solid #ff3939;
+  border-radius: 40px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.launching {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ff3998;
+  padding-bottom: 24px;
+}
+
+.title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+  color: #111111;
+  padding-bottom: 24px;
+  margin: 0;
+}
+
+.description {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #555555;
+  margin: 0;
+}
+
+.hamb {
+  cursor: pointer;
+  float: right;
+  padding-right: 20px;
+}
+
+.hamb-line {
+  background-color: #999999;
+  display: block;
+  height: 3px;
+  position: relative;
+  width: 20px;
+  border-radius: 30px;
+}
+
+.hamb-line::before,
+.hamb-line::after {
+  background-color: #999999;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+  border-radius: 30px;
+}
+
+.hamb-line::before {
+  top: 5px;
+  right: 0;
+}
+
+.hamb-line::after {
+  top: -5px;
+}
+
+.side-menu {
+  display: none;
+}
+
+.side-menu:checked ~ .main-navigation {
+  max-height: 100%;
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+  background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top: 0;
+  right: 0;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top: 0;
+  left: 0;
+}
+
+.main-header-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 32px;
+}
+
+.main-navigation {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
+
+.main-navigation .main-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.main-navigation .main-menu .menu-item a {
+  text-decoration: none;
+  color: #555555;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+
+.main-navigation .main-menu .menu-item.pink a {
+  color: #ff3998;
+}
+
+.first-page {
+  padding: 80px 0;
+  background: no-repeat url(./hero.png);
+  background-position: -480% -5%;
+  background-size: 110%;
+}
+
+.first-page .part-one .title-wrapper {
+  padding: 0 50px 32px 0;
+}
+
+.first-page .part-two {
+  padding-top: 80px;
+}
+
+.first-page .part-two .sign-up {
+  background: linear-gradient(0deg, #ff8139, #ff8139), #ff8139;
+  padding: 120px 30px 30px;
+}
+
+.first-page .part-two .sign-up .title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.first-page .part-two .company-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding-top: 60px;
+}
+
+.second-page .title-wrapper .title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  padding-right: 50px;
+}
+
+.second-page .limited-edition {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: 40px;
+  gap: 40px;
+  padding-bottom: 90px;
+  overflow: hidden;
+}
+
+.third-page {
+  padding-bottom: 60px;
+  border-bottom: 2px solid #EEEEEE;
+  background: no-repeat url(./green-girl.png);
+  background-position: 200% 100%;
+}
+
+.third-page .title-wrapper {
+  padding: 60px 0 30px 0;
+  border-top: 2px solid #EEEEEE;
+}
+
+.third-page .title-wrapper .title {
+  padding-bottom: 17px;
+  padding-right: 100px;
+}
+
+.third-page .title-wrapper .description {
+  padding-top: 5px;
+  padding-right: 100px;
+  border-top: 2px solid #EEEEEE;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-top .footer-wrapper-one {
+  padding-bottom: 60px;
+}
+
+.footer-top .footer-wrapper-one .logo-wrapper {
+  padding: 60px 0 30px;
+}
+
+.footer-top .footer-wrapper-one .description {
+  line-height: 20px;
+}
+
+.footer-top .footer-wrapper-one .icon-wrapper {
+  display: flex;
+  gap: 16px;
+  padding-top: 30px;
+}
+
+.footer-wrapper-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 40px;
+}
+
+.footer-wrapper-two .box .title,
+.footer-wrapper-two .box .box-list .box-item {
+  font-family: "Inter";
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #555555;
+}
+
+.footer-wrapper-two .box .box-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-wrapper-two .box .box-list .box-item {
+  letter-spacing: 0;
+  text-transform: capitalize;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0 100px;
+}
+
+.footer-bottom span {
+  color: #999999;
+}
+
+@media screen and (min-width: 429px) {
+  .first-page .part-one .title-wrapper .title {
+    padding-right: 40px;
+  }
+  .first-page .part-one .title-wrapper .description {
+    padding-right: 60px;
+  }
+  .third-page {
+    background-position: 160% 100%;
+  }
+  .third-page .title-wrapper .title {
+    padding-right: 200px;
+  }
+}
+@media screen and (min-width: 520px) {
+  .third-page {
+    background-position: 130% 100%;
+  }
+  .third-page .title-wrapper {
+    padding: 80px 0 30px;
+  }
+  .third-page .title-wrapper .title {
+    padding-right: 230px;
+  }
+  .third-page .title-wrapper .description {
+    padding-right: 150px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .first-page .part-one .title-wrapper .title,
+  .first-page .part-one .title-wrapper .description {
+    padding-right: 220px;
+  }
+  .third-page {
+    background-position: 100% 100%;
+  }
+  .third-page .title-wrapper .title {
+    padding-right: 280px;
+  }
+  .third-page .title-wrapper .description {
+    padding-right: 220px;
+  }
+}
+@media screen and (min-width: 650px) {
+  .first-page {
+    background-position: -300% -15%;
+  }
+  .third-page .title-wrapper {
+    padding: 120px 0 30px;
+  }
+  .footer-top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding-top: 60px;
+  }
+  .footer-wrapper-two {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .first-page {
+    background-position: 200% -5%;
+    background-size: 80%;
+  }
+}
+@media screen and (min-width: 785px) {
+  .first-page {
+    background-position: 160% -5%;
+    background-size: 70%;
+  }
+  .first-page .part-one .title-wrapper .title,
+  .first-page .part-one .title-wrapper .description {
+    padding-right: 320px;
+  }
+  .third-page {
+    background-size: 22%;
+  }
+  .third-page .title-wrapper .description {
+    padding-right: 320px;
+  }
+  .footer-wrapper-two {
+    gap: 40px;
+  }
+}
+@media screen and (min-width: 860px) {
+  .main-navigation {
+    max-height: none;
+    top: 0;
+    position: relative;
+    float: right;
+    width: -moz-fit-content;
+    width: fit-content;
+    background-color: transparent;
+  }
+  .main-navigation .main-menu {
+    flex-direction: row;
+  }
+  .main-menu li {
+    float: left;
+  }
+  .hamb {
+    display: none;
+  }
+  .mobile-version {
+    display: block;
+  }
+  .first-page {
+    background-position: 150% 15%;
+    background-size: 70%;
+    padding: 200px 0 120px;
+  }
+  .first-page .part-one .title-wrapper {
+    padding: 0 100px 40px 0;
+  }
+  .first-page .part-one .title-wrapper .title {
+    padding: 0 120px 32px 0;
+    font-size: 96px;
+    line-height: 116px;
+  }
+  .first-page .part-two {
+    padding-top: 200px;
+  }
+  .first-page .part-two .company-list {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding-top: 120px;
+  }
+  .first-page .part-two .sign-up {
+    padding: 154px 30px 64px 64px;
+  }
+  .second-page .limited-edition {
+    padding-top: 56px;
+    padding-bottom: 120px;
+  }
+  .third-page {
+    padding-bottom: 120px;
+    background-position: 85% 100%;
+    background-size: 25%;
+  }
+  .third-page .title-wrapper {
+    padding: 120px 0 40px;
+  }
+  .third-page .title-wrapper .title {
+    font-size: 56px;
+    line-height: 68px;
+  }
+  .third-page .title-wrapper .description {
+    padding-right: 500px;
+    border-top: none;
+  }
+  .footer-top .footer-wrapper-one .logo-wrapper {
+    padding: 60px 0 30px;
+  }
+}
+@media screen and (min-width: 910px) {
+  .first-page .part-one .title-wrapper {
+    padding: 0 200px 40px 0;
+  }
+  .third-page {
+    background-position: 90% 100%;
+    background-size: 20%;
+  }
+}
+@media screen and (min-width: 1010px) {
+  .first-page .part-one .title-wrapper {
+    padding: 0 300px 40px 0;
+  }
+  .first-page .part-one .title-wrapper .title {
+    padding: 0 140px 32px 0;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .first-page .part-one .title-wrapper .title {
+    padding: 0 200px 32px 0;
+  }
+}
+@media screen and (min-width: 1190px) {
+  .first-page {
+    background-position: 130% 15%;
+    background-size: 60%;
+  }
+  .first-page .part-one .title-wrapper {
+    padding: 0 350px 40px 0;
+  }
+  .third-page {
+    background-position: 80% 100%;
+    background-size: 18%;
+  }
+  .third-page .title-wrapper .description {
+    padding-right: 800px;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .first-page .part-one .title-wrapper {
+    padding: 0 450px 40px 0;
+  }
+  .third-page {
+    background-size: 17%;
+  }
+  .third-page .title-wrapper .description {
+    padding-right: 900px;
+  }
+}
+@media screen and (min-width: 1340px) {
+  .first-page {
+    background-position: 90% 15%;
+    background-size: 55%;
+  }
+  .first-page .part-one .title-wrapper {
+    padding: 0 550px 40px 0;
+  }
+  .third-page {
+    background-size: 15%;
+  }
+  .third-page .title-wrapper .description {
+    padding-right: 950px;
+  }
+}/*# sourceMappingURL=style.css.map */
