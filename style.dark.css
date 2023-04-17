@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #111111;
   margin: 0;
 }
 
@@ -23,7 +23,7 @@ body {
 
 .button {
   background-color: transparent;
-  color: #111111;
+  color: #ffffff;
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -34,6 +34,10 @@ body {
   border: 4px solid #ff3939;
   border-radius: 40px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.logo {
+  color: #ffffff;
 }
 
 .launching {
@@ -54,7 +58,7 @@ body {
   font-weight: 900;
   font-size: 48px;
   line-height: 58px;
-  color: #111111;
+  color: #ffffff;
   padding-bottom: 24px;
   margin: 0;
 }
@@ -65,7 +69,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  color: #555555;
+  color: #CCCCCC;
   margin: 0;
 }
 
@@ -157,7 +161,7 @@ body {
 
 .main-navigation .main-menu .menu-item a {
   text-decoration: none;
-  color: #555555;
+  color: #CCCCCC;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -191,9 +195,14 @@ body {
 }
 
 .first-page .part-two .sign-up .title {
+  color: #111111;
   font-weight: 500;
   font-size: 40px;
   line-height: 48px;
+}
+
+.first-page .part-two .sign-up .description {
+  color: #111111;
 }
 
 .first-page .part-two .company-list {
@@ -225,7 +234,7 @@ body {
 }
 
 .second-page .limited-edition .edition-item .item-description {
-  background-color: #EEEEEE;
+  background-color: #000000;
   border-radius: 0 0 15px 15px;
   padding: 24px;
 }
@@ -261,7 +270,7 @@ body {
   font-style: normal;
   font-size: 20px;
   line-height: 20px;
-  color: #111111;
+  color: #ffffff;
   text-transform: capitalize;
 }
 
@@ -275,7 +284,7 @@ body {
   font-style: normal;
   font-size: 20px;
   line-height: 20px;
-  color: #111111;
+  color: #ffffff;
 }
 
 .edition-item .item-description .line-3 .number,
@@ -289,14 +298,14 @@ body {
 
 .third-page {
   padding-bottom: 60px;
-  border-bottom: 2px solid #EEEEEE;
+  border-bottom: 2px solid #555555;
   background: no-repeat url(./green-girl.png);
   background-position: 200% 100%;
 }
 
 .third-page .title-wrapper {
   padding: 60px 0 30px 0;
-  border-top: 2px solid #EEEEEE;
+  border-top: 2px solid #555555;
 }
 
 .third-page .title-wrapper .title {
@@ -307,7 +316,7 @@ body {
 .third-page .title-wrapper .description {
   padding-top: 5px;
   padding-right: 100px;
-  border-top: 2px solid #EEEEEE;
+  border-top: 2px solid #555555;
 }
 
 .footer-top {
@@ -347,7 +356,7 @@ body {
   line-height: 19px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #555555;
+  color: #CCCCCC;
 }
 
 .footer-wrapper-two .box .box-list {
@@ -595,4 +604,4 @@ body {
   .third-page .title-wrapper .description {
     padding-right: 950px;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.dark.css.map */

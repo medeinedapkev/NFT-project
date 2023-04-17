@@ -1,3 +1,6 @@
+@use 'scss/variables/colors';
+@use 'scss/variables/spacing';
+
 *,
 *::before,
 *::after {
@@ -5,7 +8,7 @@
 }
 
 body {
-  background-color: #ffffff;
+  background-color: $dark-1;
   margin: 0;
 }
 
@@ -13,8 +16,8 @@ body {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: spacing.$spacing-1;
+  padding-right: spacing.$spacing-1;
 }
 
 .mobile-version {
@@ -23,17 +26,21 @@ body {
 
 .button {
   background-color: transparent;
-  color: #111111;
+  color: colors.$background-color;
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
-  line-height: 30px;
+  line-height: spacing.$spacing-1;
   text-align: center;
   padding: 22px 56px;
   border: 4px solid #ff3939;
   border-radius: 40px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.logo {
+    color: colors.$background-color;
 }
 
 .launching {
@@ -44,7 +51,7 @@ body {
   line-height: 19px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #ff3998;
+  color: colors.$primary-color;
   padding-bottom: 24px;
 }
 
@@ -54,7 +61,7 @@ body {
   font-weight: 900;
   font-size: 48px;
   line-height: 58px;
-  color: #111111;
+  color: colors.$background-color;
   padding-bottom: 24px;
   margin: 0;
 }
@@ -64,8 +71,8 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  line-height: 30px;
-  color: #555555;
+  line-height: spacing.$spacing-1;
+  color: colors.$light-3;
   margin: 0;
 }
 
@@ -76,24 +83,24 @@ body {
 }
 
 .hamb-line {
-  background-color: #999999;
+  background-color: colors.$dark-4;
   display: block;
   height: 3px;
   position: relative;
   width: 20px;
-  border-radius: 30px;
+  border-radius: spacing.$spacing-1;
 }
 
 .hamb-line::before,
 .hamb-line::after {
-  background-color: #999999;
+  background-color: colors.$dark-4;
   content: "";
   display: block;
   height: 100%;
   position: absolute;
   transition: all 0.2s ease-out;
   width: 100%;
-  border-radius: 30px;
+  border-radius: spacing.$spacing-1;
 }
 
 .hamb-line::before {
@@ -157,7 +164,7 @@ body {
 
 .main-navigation .main-menu .menu-item a {
   text-decoration: none;
-  color: #555555;
+  color: colors.$light-3;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -167,7 +174,7 @@ body {
 }
 
 .main-navigation .main-menu .menu-item.pink a {
-  color: #ff3998;
+  color: colors.$primary-color;
 }
 
 .first-page {
@@ -182,7 +189,7 @@ body {
 }
 
 .first-page .part-two {
-  padding-top: 80px;
+    padding-top: spacing.$spacing-2;
 }
 
 .first-page .part-two .sign-up {
@@ -191,9 +198,14 @@ body {
 }
 
 .first-page .part-two .sign-up .title {
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 48px;
+    color: colors.$dark-1;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.first-page .part-two .sign-up .description {
+    color: colors.$dark-1;
 }
 
 .first-page .part-two .company-list {
@@ -204,99 +216,88 @@ body {
 }
 
 .second-page .title-wrapper .title {
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 48px;
-  padding-right: 50px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    padding-right: 50px;
 }
 
 .second-page .limited-edition {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding-top: 40px;
-  gap: 40px;
-  padding-bottom: 90px;
-  overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 40px;
+    gap: 40px;
+    padding-bottom: 90px;
+    overflow: hidden;
 }
-
 .second-page .limited-edition .edition-item {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
-
 .second-page .limited-edition .edition-item .item-description {
-  background-color: #EEEEEE;
-  border-radius: 0 0 15px 15px;
-  padding: 24px;
+    background-color: colors.$black;
+    border-radius: 0 0 15px 15px;
+    padding: 24px;
 }
-
 .second-page .limited-edition .edition-item .item-description .line-1,
 .second-page .limited-edition .edition-item .item-description .line-2,
 .second-page .limited-edition .edition-item .item-description .line-3 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
 .edition-item .item-description .line-1 .series {
-  font-family: "Inter";
-  font-style: normal;
-  font-size: 12px;
-  line-height: 12px;
-  color: #FF8139;
-  text-transform: uppercase;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 12px;
+    line-height: 12px;
+    color: colors.$orange-color;
+    text-transform: uppercase;
 }
-
 .edition-item .item-description .line-1 .bid {
-  font-family: "Inter";
-  font-style: normal;
-  font-size: 12px;
-  line-height: 12px;
-  color: #777777;
-  text-transform: uppercase;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 12px;
+    line-height: 12px;
+    color: colors.$dark-3;
+    text-transform: uppercase;
 }
-
 .edition-item .item-description .line-2 .item-name {
-  font-family: "Inter";
-  font-style: normal;
-  font-size: 20px;
-  line-height: 20px;
-  color: #111111;
-  text-transform: capitalize;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 20px;
+    line-height: 20px;
+    color: colors.$background-color;
+    text-transform: capitalize;
 }
-
 .edition-item .item-description .line-2 .price-wrapper {
-  display: flex;
-  gap: 8px;
+    display: flex;
+    gap: 8px;
 }
-
 .edition-item .item-description .line-2 .price {
-  font-family: "Inter";
-  font-style: normal;
-  font-size: 20px;
-  line-height: 20px;
-  color: #111111;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 20px;
+    line-height: 20px;
+    color: colors.$background-color;
 }
-
 .edition-item .item-description .line-3 .number,
 .edition-item .item-description .line-3 .time-left {
-  font-family: "Inter";
-  font-style: normal;
-  font-size: 18px;
-  line-height: 18px;
-  color: #777777;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 18px;
+    line-height: 18px;
+    color: colors.$dark-3;
 }
-
 .third-page {
   padding-bottom: 60px;
-  border-bottom: 2px solid #EEEEEE;
+  border-bottom: 2px solid colors.$dark-2;
   background: no-repeat url(./green-girl.png);
   background-position: 200% 100%;
 }
-
 .third-page .title-wrapper {
   padding: 60px 0 30px 0;
-  border-top: 2px solid #EEEEEE;
+  border-top: 2px solid colors.$dark-2;
 }
 
 .third-page .title-wrapper .title {
@@ -307,7 +308,7 @@ body {
 .third-page .title-wrapper .description {
   padding-top: 5px;
   padding-right: 100px;
-  border-top: 2px solid #EEEEEE;
+  border-top: 2px solid colors.$dark-2;
 }
 
 .footer-top {
@@ -333,7 +334,7 @@ body {
   padding-top: 30px;
 }
 
-.footer-wrapper-two {
+.footer-wrapper-two  {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -347,9 +348,8 @@ body {
   line-height: 19px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #555555;
+  color: colors.$light-3;
 }
-
 .footer-wrapper-two .box .box-list {
   display: flex;
   flex-direction: column;
@@ -371,18 +371,18 @@ body {
 }
 
 .footer-bottom span {
-  color: #999999;
+  color: colors.$dark-4;
 }
 
 @media screen and (min-width: 429px) {
   .first-page .part-one .title-wrapper .title {
-    padding-right: 40px;
+  padding-right: 40px;
   }
   .first-page .part-one .title-wrapper .description {
     padding-right: 60px;
   }
   .third-page {
-    background-position: 160% 100%;
+  background-position: 160% 100%;
   }
   .third-page .title-wrapper .title {
     padding-right: 200px;
@@ -391,31 +391,31 @@ body {
 @media screen and (min-width: 520px) {
   .third-page {
     background-position: 130% 100%;
+    }
+    .third-page .title-wrapper {
+      padding: 80px 0 30px;
   }
-  .third-page .title-wrapper {
-    padding: 80px 0 30px;
+    .third-page .title-wrapper .title {
+      padding-right: 230px;
   }
-  .third-page .title-wrapper .title {
-    padding-right: 230px;
-  }
-  .third-page .title-wrapper .description {
-    padding-right: 150px;
+    .third-page .title-wrapper .description {
+      padding-right: 150px;
   }
 }
 @media screen and (min-width: 600px) {
   .first-page .part-one .title-wrapper .title,
   .first-page .part-one .title-wrapper .description {
     padding-right: 220px;
-  }
-  .third-page {
-    background-position: 100% 100%;
-  }
-  .third-page .title-wrapper .title {
-    padding-right: 280px;
-  }
-  .third-page .title-wrapper .description {
-    padding-right: 220px;
-  }
+    }
+    .third-page {
+      background-position: 100% 100%;
+    }
+    .third-page .title-wrapper .title {
+      padding-right: 280px;
+    }
+    .third-page .title-wrapper .description {
+        padding-right: 220px;
+    }
 }
 @media screen and (min-width: 650px) {
   .first-page {
@@ -468,7 +468,6 @@ body {
     top: 0;
     position: relative;
     float: right;
-    width: -moz-fit-content;
     width: fit-content;
     background-color: transparent;
   }
@@ -595,4 +594,4 @@ body {
   .third-page .title-wrapper .description {
     padding-right: 950px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
