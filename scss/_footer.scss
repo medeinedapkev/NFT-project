@@ -1,0 +1,115 @@
+@use 'variables/main-classes';
+@use 'variables/colors';
+@use 'variables/spacing';
+@use 'variables/responsive';
+
+.mobile-version {
+  @include responsive.respo-7 {
+  display: block;
+  }
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    @include responsive.respo-4 {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      padding-top: 60px;
+    }
+  }
+  
+  .footer-top .footer-wrapper-one {
+    padding-bottom: 60px;
+  }
+  
+  .footer-top .footer-wrapper-one .logo-wrapper {
+    padding: 60px 0 30px;
+    @include responsive.respo-7 {
+      padding: 60px 0 30px;
+    }
+  }
+  
+  .footer-top .footer-wrapper-one .description {
+    line-height: 20px;
+  }
+  
+  .footer-top .footer-wrapper-one .icon-wrapper {
+    display: flex;
+    gap: 16px;
+    padding-top: 30px;
+  }
+  
+  .footer-wrapper-two  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 40px;
+    @include responsive.respo-4 {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      gap: 20px;
+    }
+    @include responsive.respo-6 {
+      gap: 40px;
+    }
+  }
+  
+  .footer-wrapper-two .box .title,
+  .footer-wrapper-two .box .box-list .box-item {
+    font-family: "Inter";
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: colors.$dark-2;
+  }
+  .footer-wrapper-two .box .box-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-wrapper-two .box .box-list .box-item {
+    letter-spacing: 0;
+    text-transform: capitalize;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0 100px;
+  }
+  
+  .footer-bottom span {
+    color: colors.$dark-4;
+  }
+
+  // @media screen and (min-width: 650px) {
+  //   .footer-top {
+  //     flex-direction: row;
+  //     justify-content: space-between;
+  //     align-items: center;
+  //     gap: 40px;
+  //     padding-top: 60px;
+  //   }
+  //   .footer-wrapper-two {
+  //     grid-template-columns: repeat(4, 1fr);
+  //     grid-template-rows: 1fr;
+  //     gap: 20px;
+  //   }
+  // }
+  
+  // @media screen and (min-width: 860px) {
+  //   .mobile-version {
+  //     display: block;
+  //   }
+  //   .footer-top .footer-wrapper-one .logo-wrapper {
+  //     padding: 60px 0 30px;
+  //   }
+  // }

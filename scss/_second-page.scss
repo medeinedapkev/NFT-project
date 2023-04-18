@@ -1,0 +1,99 @@
+@use 'variables/main-classes';
+@use 'variables/colors';
+@use 'variables/spacing';
+@use 'variables/responsive';
+
+.mobile-version {
+  @include responsive.respo-7 {
+  display: block;
+  }
+}
+
+.second-page .title-wrapper .title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    padding-right: 50px;
+}
+
+.second-page .limited-edition {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 40px;
+    gap: 40px;
+    padding-bottom: 90px;
+    overflow: hidden;
+    @include responsive.respo-7 {
+      padding-top: 56px;
+      padding-bottom: 120px;
+    }
+}
+.second-page .limited-edition .edition-item {
+  display: flex;
+  flex-direction: column;
+}
+.second-page .limited-edition .edition-item .item-description {
+  background-color: colors.$light-2;
+  border-radius: 0 0 15px 15px;
+  padding: 24px;
+}
+.second-page .limited-edition .edition-item .item-description .line-1,
+.second-page .limited-edition .edition-item .item-description .line-2,
+.second-page .limited-edition .edition-item .item-description .line-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.edition-item .item-description .line-1 .series {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 12px;
+  line-height: 12px;
+  color: colors.$orange-color;
+  text-transform: uppercase;
+}
+.edition-item .item-description .line-1 .bid {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 12px;
+  line-height: 12px;
+  color: colors.$dark-3;
+  text-transform: uppercase;
+}
+.edition-item .item-description .line-2 .item-name {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 20px;
+  line-height: 20px;
+  color: colors.$dark-1;
+  text-transform: capitalize;
+}
+.edition-item .item-description .line-2 .price-wrapper {
+  display: flex;
+  gap: 8px;
+}
+.edition-item .item-description .line-2 .price {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 20px;
+  line-height: 20px;
+  color: colors.$dark-1;
+}
+.edition-item .item-description .line-3 .number,
+.edition-item .item-description .line-3 .time-left {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 18px;
+  line-height: 18px;
+  color: colors.$dark-3;
+}
+
+// @media screen and (min-width: 860px) {
+//   .mobile-version {
+//     display: block;
+//   }
+//   .second-page .limited-edition {
+//     padding-top: 56px;
+//     padding-bottom: 120px;
+//   }
+// }

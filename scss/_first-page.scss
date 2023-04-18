@@ -1,0 +1,133 @@
+@use 'variables/main-classes';
+@use 'variables/colors';
+@use 'variables/spacing';
+@use 'variables/responsive';
+
+.first-page {
+    padding: 80px 0;
+    background: no-repeat url(./hero.png);
+    background-position: -480% 0%;
+    background-size: 110%;
+    @include responsive.respo-0 {
+      background-position: -480% 5%; 
+    }
+    @include responsive.respo-3 {
+      background-position: -280% -5%;
+    }
+    @include responsive.respo-4 {
+      background-position: 180% -5%;
+      background-size: 80%;
+    }
+    @include responsive.respo-5 {
+      background-position: 200% -5%;
+    }
+    @include responsive.respo-6 {
+      background-position: 160% -5%;
+      background-size: 70%;
+    }
+    @include responsive.respo-7 {
+      background-position: 150% 15%;
+      background-size: 70%;
+      padding: 200px 0 120px;
+    }
+    @include responsive.respo-11 {
+      background-position: 130% 15%;
+      background-size: 60%;
+    }
+    @include responsive.respo-13 {
+      background-position: 90% 15%;
+      background-size: 55%;
+    }
+  }
+  
+  .first-page .part-one .title-wrapper {
+    padding: 0 50px 32px 0;
+    @include responsive.respo-7 {
+      padding: 0 100px 40px 0;
+    }
+    @include responsive.respo-8 {
+      padding: 0 200px 40px 0;
+    }
+    @include responsive.respo-9 {
+      padding: 0 300px 40px 0;
+    }
+    @include responsive.respo-11 {
+      padding: 0 350px 40px 0;
+    }
+    @include responsive.respo-12 {
+      padding: 0 450px 40px 0;
+    }
+    @include responsive.respo-13 {
+      padding: 0 550px 40px 0;
+    }
+  }
+  .first-page .part-one .title-wrapper .title {
+    @include responsive.respo-1 {
+      padding-right: 40px;
+    }
+    @include responsive.respo-3 {
+      padding-right: 220px;
+    }
+    @include responsive.respo-6 {
+      padding-right: 320px;
+    }
+    @include responsive.respo-7 {
+      padding: 0 120px 32px 0;
+      font-size: 96px;
+      line-height: 116px;
+    }
+    @include responsive.respo-9 {
+      padding: 0 140px 32px 0;
+    }
+    @include responsive.respo-10 {
+      padding: 0 200px 32px 0;
+    }
+  }
+  
+  .first-page .part-one .title-wrapper .description {
+    @include responsive.respo-0 {
+      padding-right: 65px;
+    }
+    @include responsive.respo-1 {
+      padding-right: 80px;
+    }
+    @include responsive.respo-3 {
+      padding-right: 220px;
+    }
+    @include responsive.respo-6 {
+      padding-right: 320px;
+    }
+  }
+
+  .first-page .part-two {
+      padding-top: spacing.$spacing-2;
+      @include responsive.respo-6 {
+        padding-top: 200px;
+      }
+  }
+  
+  .first-page .part-two .sign-up {
+    background: linear-gradient(0deg, #ff8139, #ff8139), #ff8139;
+    padding: 120px 30px 30px;
+    @include responsive.respo-6 {
+      padding: 154px 30px 64px 64px;
+    }
+  }
+  
+  .first-page .part-two .sign-up .title {
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 48px;
+  }
+  
+  .first-page .part-two .company-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding-top: 60px;
+    @include responsive.respo-6 {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      padding-top: 120px;
+    }
+  }

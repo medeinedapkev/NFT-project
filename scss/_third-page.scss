@@ -1,0 +1,202 @@
+@use 'variables/main-classes';
+@use 'variables/colors';
+@use 'variables/spacing';
+@use 'variables/responsive';
+
+.third-page {
+    padding-bottom: 60px;
+    border-bottom: 2px solid colors.$light-2;
+    background: no-repeat url(./green-girl.png);
+    background-position: 250% 100%;
+    @include responsive.respo-0 {
+      background-position: 190% 100%;
+    }
+    @include responsive.respo-1 {
+      background-position: 160% 100%;
+    }
+    @include responsive.respo-2 {
+      background-position: 130% 100%;
+    }
+    @include responsive.respo-3 {
+      background-position: 100% 100%;
+    }
+    @include responsive.respo-6 {
+      background-size: 22%;
+    }
+    @include responsive.respo-7 {
+      padding-bottom: 120px;
+      background-position: 85% 100%;
+      background-size: 25%;
+    }
+    @include responsive.respo-8 {
+      background-position: 90% 100%;
+      background-size: 20%;
+    }
+    @include responsive.respo-11 {
+      background-position: 80% 100%;
+      background-size: 18%;
+    }
+    @include responsive.respo-12 {
+      background-size: 17%;
+    }
+    @include responsive.respo-13 {
+      background-size: 15%;
+    }
+  }
+  .third-page .title-wrapper {
+    padding: 60px 0 30px 0;
+    border-top: 2px solid colors.$light-2;
+    @include responsive.respo-2 {
+      padding: 80px 0 30px;
+    }
+    @include responsive.respo-4 {
+      padding: 120px 0 30px;
+    }
+    @include responsive.respo-7 {
+      padding: 120px 0 40px;
+    }
+  }
+  
+  .third-page .title-wrapper .title {
+    padding-bottom: 17px;
+    padding-right: 100px;
+    @include responsive.respo-1 {
+      padding-right: 200px;
+    }
+    @include responsive.respo-2 {
+      padding-right: 230px;
+    }
+    @include responsive.respo-3 {
+      padding-right: 280px;
+    }
+    @include responsive.respo-7 {
+      font-size: 56px;
+      line-height: 68px;
+    }
+  }
+  
+  .third-page .title-wrapper .description {
+    padding-top: 5px;
+    padding-right: 100px;
+    border-top: 2px solid colors.$light-2;
+    @include responsive.respo-2 {
+      padding-right: 150px;
+    }
+    @include responsive.respo-3 {
+      padding-right: 220px;
+    }
+    @include responsive.respo-6 {
+      padding-right: 320px;
+    }
+    @include responsive.respo-7 {
+      padding-right: 500px;
+      border-top: none;
+    }
+    @include responsive.respo-11 {
+      padding-right: 800px;
+    }
+    @include responsive.respo-12 {
+      padding-right: 900px;
+    }
+    @include responsive.respo-13 {
+      padding-right: 950px;
+    }
+  }
+
+  // @media screen and (min-width: 429px) {
+  //   .third-page {
+  //   background-position: 160% 100%;
+  //   }
+  //   .third-page .title-wrapper .title {
+  //     padding-right: 200px;
+  //   }
+  // }
+  // @media screen and (min-width: 520px) {
+  //   .third-page {
+  //     background-position: 130% 100%;
+  //     }
+  //     .third-page .title-wrapper {
+  //       padding: 80px 0 30px;
+  //   }
+  //     .third-page .title-wrapper .title {
+  //       padding-right: 230px;
+  //   }
+  //     .third-page .title-wrapper .description {
+  //       padding-right: 150px;
+  //   }
+  // }
+  // @media screen and (min-width: 600px) {
+  //     .third-page {
+  //       background-position: 100% 100%;
+  //     }
+  //     .third-page .title-wrapper .title {
+  //       padding-right: 280px;
+  //     }
+  //     .third-page .title-wrapper .description {
+  //         padding-right: 220px;
+  //     }
+  // }
+  // @media screen and (min-width: 650px) {
+  //   .third-page .title-wrapper {
+  //     padding: 120px 0 30px;
+  //   }
+  // }
+
+  // @media screen and (min-width: 785px) {
+  //   .third-page {
+  //     background-size: 22%;
+  //   }
+  //   .third-page .title-wrapper .description {
+  //     padding-right: 320px;
+  //   }
+  // }
+  // @media screen and (min-width: 860px) {
+  //   .third-page {
+  //     padding-bottom: 120px;
+  //     background-position: 85% 100%;
+  //     background-size: 25%;
+  //   }
+  //   .third-page .title-wrapper {
+  //     padding: 120px 0 40px;
+  //   }
+  //   .third-page .title-wrapper .title {
+  //     font-size: 56px;
+  //     line-height: 68px;
+  //   }
+  //   .third-page .title-wrapper .description {
+  //     padding-right: 500px;
+  //     border-top: none;
+  //   }
+  // }
+  // @media screen and (min-width: 910px) {
+  //   .third-page {
+  //     background-position: 90% 100%;
+  //     background-size: 20%;
+  //   }
+  // }
+
+  // @media screen and (min-width: 1190px) {
+  //   .third-page {
+  //     background-position: 80% 100%;
+  //     background-size: 18%;
+  //   }
+  //   .third-page .title-wrapper .description {
+  //     padding-right: 800px;
+  //   }
+  // }
+  // @media screen and (min-width: 1240px) {
+  //   .third-page {
+  //     background-size: 17%;
+  //   }
+  //   .third-page .title-wrapper .description {
+  //     padding-right: 900px;
+  //   }
+  // }
+  // @media screen and (min-width: 1340px) {
+  //   .third-page {
+  //     background-size: 15%;
+  //   }
+  //   .third-page .title-wrapper .description {
+  //     padding-right: 950px;
+  //   }
+  // }
